@@ -1,5 +1,9 @@
 import tkinter as tk
-from .interface import PDFSplitterApp
+try:
+    from .interface import PDFSplitterApp
+except ImportError:
+    from src.interface import PDFSplitterApp
+
 
 try:
     from tkinterdnd2 import TkinterDnD
@@ -8,6 +12,11 @@ except ImportError:
     DND_AVAILABLE = False
 
 def main():
+    """
+    Main entry point of the application.
+    Initializes the Tkinter root window (with Drag & Drop support if available)
+    and launches the PDFSplitterApp.
+    """
     if DND_AVAILABLE:
         root = TkinterDnD.Tk()
     else:
