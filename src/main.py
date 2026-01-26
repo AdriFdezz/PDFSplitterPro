@@ -1,5 +1,5 @@
 import tkinter as tk
-from PDFsplitter_interfaz import PDFSplitterApp
+from .interface import PDFSplitterApp
 
 try:
     from tkinterdnd2 import TkinterDnD

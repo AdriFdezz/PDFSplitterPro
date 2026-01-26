@@ -1,7 +1,7 @@
 import os
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
-from PDFsplitter_logic import split_pdf
+from .logic import split_pdf
 from PIL import Image, ImageTk
 try:
     from tkinterdnd2 import DND_FILES, TkinterDnD
@@ -22,9 +22,9 @@ class PDFSplitterApp:
         try:
             import sys
             if getattr(sys, 'frozen', False):
-                icon_path = os.path.join(sys._MEIPASS, 'PDFsplitterPRO_icono.png')
+                icon_path = os.path.join(sys._MEIPASS, 'assets', 'icon.png')
             else:
-                icon_path = 'PDFsplitterPRO_icono.png'
+                icon_path = os.path.join('assets', 'icon.png')
             icon_image = Image.open(icon_path)
             icon_image = icon_image.resize((32, 32), Image.Resampling.LANCZOS)
             icon_photo = ImageTk.PhotoImage(icon_image)
@@ -67,9 +67,9 @@ class PDFSplitterApp:
         try:
             import sys
             if getattr(sys, 'frozen', False):
-                icon_path = os.path.join(sys._MEIPASS, 'PDFsplitterPRO_icono.png')
+                icon_path = os.path.join(sys._MEIPASS, 'assets', 'icon.png')
             else:
-                icon_path = 'PDFsplitterPRO_icono.png'
+                icon_path = os.path.join('assets', 'icon.png')
             # Abrir PNG con transparencia completa
             app_icon_img = Image.open(icon_path)
             if app_icon_img.mode != 'RGBA':
