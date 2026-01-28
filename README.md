@@ -146,15 +146,6 @@ This project is open-source and available under the MIT License.
 
 ---
 
-## Contributing
-
-Contributions are welcome! Feel free to:
-- Report bugs
-- Suggest features
-- Submit pull requests
-
----
-
 <div align="center">
   Made with ❤️ using Python and Tkinter
 </div>
